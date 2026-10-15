@@ -172,6 +172,7 @@ document.addEventListener('click', (e) => {
         };
         if (un_zzzzzz && who_click === "" && can_un_zzz) {
             who_click = "unz";
+            can_un_zzz = false;
             console.log("followed un-zzzz");
             adv.style.display = "";
 
