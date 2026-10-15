@@ -10,6 +10,8 @@ const act = document.getElementById("act");
 const header = document.querySelector(".namee h4");
 const content = document.querySelector(".namee p");
 
+let who_click = "";
+
 adv.addEventListener('click', () => {
     who_click = ""
     adv.style.display = "";
@@ -48,10 +50,18 @@ time.addEventListener('animationend', () => {
 
 
 let family = [];
+let zzzzzz = [];
+
+let un_zzzzzz = false;
+let can_un_zzz = true;
+
+let egy = false;
+let can_egy = true;
+
 let can_show_family_achivement = true;
 
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('btn')) {
+    if (e.target.classList.contains('btn') && who_click === "") {
         e.target.classList.toggle('btn-u');
         e.target.textContent = e.target.classList.contains('btn-u') ? 'Unfollow' : 'Follow';
 
@@ -85,8 +95,51 @@ document.addEventListener('click', (e) => {
         } if (name === "هبة عبدالرحمن الباز" && e.target.textContent === 'Follow') {
             family.pop(name);
         };
+
+        if (name === "زززززز" && e.target.textContent === 'Unfollow') {
+            zzzzzz.push(name);
+        } if (name === "زززززز" && e.target.textContent === 'Follow') {
+            zzzzzz.pop(name);
+        };
+        if (name === "ذبابة الكترونية 2" && e.target.textContent === 'Unfollow') {
+            zzzzzz.push(name);
+        } if (name === "ذبابة الكترونية 2" && e.target.textContent === 'Follow') {
+            zzzzzz.pop(name);
+        };
+        if (name === "ذبابة الكترونية 3" && e.target.textContent === 'Unfollow') {
+            zzzzzz.push(name);
+        } if (name === "ذبابة الكترونية 3" && e.target.textContent === 'Follow') {
+            zzzzzz.pop(name);
+        };
+        if (name === "لست ذبابة الكترونية" && e.target.textContent === 'Unfollow') {
+            zzzzzz.push(name);
+        } if (name === "لست ذبابة الكترونية" && e.target.textContent === 'Follow') {
+            zzzzzz.pop(name);
+        };
+        if (name === "أحاول ان اكون ذبابة الكترونية" && e.target.textContent === 'Unfollow') {
+            zzzzzz.push(name);
+        } if (name === "أحاول ان اكون ذبابة الكترونية" && e.target.textContent === 'Follow') {
+            zzzzzz.pop(name);
+        };
+
+        if (name === "معاً ضد الذباب الالكتروني" && e.target.textContent === "Unfollow") {
+            un_zzzzzz = true;
+        } if (name === "معاً ضد الذباب الالكتروني" && e.target.textContent === "Follow") {
+            un_zzzzzz = false;
+            can_un_zzz = true;
+        }
+
+        if (name === "مصر" && e.target.textContent === "Unfollow") {
+            egy = true;
+        } if (name === "مصر" && e.target.textContent === "Follow") {
+            egy = false;
+            can_egy = true;
+        }
+
         console.log(family);
-        if (family.length >= 5 && can_show_family_achivement) {
+
+        if (family.length >= 5 && who_click === "") {
+            who_click = "fam";
             console.log("followed all family!");
             adv.style.display = "";
 
@@ -98,7 +151,47 @@ document.addEventListener('click', (e) => {
             adv.classList.add("animate");
             time.classList.add("time");
             family.length = 0;
-            can_show_family_achivement = false;
-        }
+        };
+        if (zzzzzz.length >= 5 && who_click === "") {
+            who_click = "zzz";
+            console.log("followed all zzzz");
+            adv.style.display = "";
+
+            header.textContent = "الكثير من الذباب!";
+            content.textContent = "انجزت: متابعة الذباب كله.";
+
+            adv.classList.remove("re-animate");
+            adv.classList.remove("op");
+            adv.classList.add("animate");
+            time.classList.add("time");
+            zzzzzz.length = 0;
+        };
+        if (un_zzzzzz && who_click === "" && can_un_zzz) {
+            who_click = "unz";
+            console.log("followed un-zzzz");
+            adv.style.display = "";
+
+            header.textContent = "هل أشم رائحة بيروسول؟";
+            content.textContent = "انجزت: متابعة ضد الذباب الالكتروني.";
+
+            adv.classList.remove("re-animate");
+            adv.classList.remove("op");
+            adv.classList.add("animate");
+            time.classList.add("time");
+        };
+        if (egy && who_click === "" && can_egy) {
+            who_click = "egy";
+            can_egy = false;
+            console.log("تحيا مصر!");
+            adv.style.display = "";
+
+            header.textContent = "تحيا مصر!";
+            content.textContent = "انجزت: متابعة أم الدنيا.";
+
+            adv.classList.remove("re-animate");
+            adv.classList.remove("op");
+            adv.classList.add("animate");
+            time.classList.add("time");
+        };
     }
 });
