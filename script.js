@@ -60,6 +60,8 @@ let can_egy = true;
 
 let can_show_family_achivement = true;
 
+const sound = new Audio('sound/steam-achievement.mp3');
+
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('btn') && who_click === "") {
         e.target.classList.toggle('btn-u');
@@ -150,6 +152,7 @@ document.addEventListener('click', (e) => {
             adv.classList.remove("op");
             adv.classList.add("animate");
             time.classList.add("time");
+            sound.play()
             family.length = 0;
         };
         if (zzzzzz.length >= 5 && who_click === "") {
@@ -164,6 +167,7 @@ document.addEventListener('click', (e) => {
             adv.classList.remove("op");
             adv.classList.add("animate");
             time.classList.add("time");
+            sound.play()
             zzzzzz.length = 0;
         };
         if (un_zzzzzz && who_click === "" && can_un_zzz) {
@@ -178,6 +182,7 @@ document.addEventListener('click', (e) => {
             adv.classList.remove("op");
             adv.classList.add("animate");
             time.classList.add("time");
+            sound.play()
         };
         if (egy && who_click === "" && can_egy) {
             who_click = "egy";
@@ -192,6 +197,7 @@ document.addEventListener('click', (e) => {
             adv.classList.remove("op");
             adv.classList.add("animate");
             time.classList.add("time");
+            sound.play()
         };
     }
 });
