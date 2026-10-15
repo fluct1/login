@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بحث وحسابات</title>
+<style>
+:root{--bg:#f3f6fb;--surface:#fff;--text:#16202e;--muted:#6b7788;--line:#dde4ee;--accent:#2457d6;--accent-text:#fff;--soft:#e8eefc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10151d;--surface:#18202c;--text:#e8edf5;--muted:#8d9aae;--line:#2a3545;--accent:#6c93f5;--accent-text:#0d1420;--soft:#22304d}}
+:root[data-theme="dark"]{--bg:#10151d;--surface:#18202c;--text:#e8edf5;--muted:#8d9aae;--line:#2a3545;--accent:#6c93f5;--accent-text:#0d1420;--soft:#22304d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;min-height:100vh}
+main{max-width:640px;margin:0 auto;padding:32px 16px}
+.search{display:flex;gap:10px;align-items:stretch;margin-bottom:28px}
+.search input{flex:1;min-width:0;padding:14px 18px;font:inherit;font-size:1rem;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.search input:focus,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn{font:inherit;font-weight:600;cursor:pointer;border:0;border-radius:12px;background:var(--accent);color:var(--accent-text);padding:0 24px}
+.list{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.acc{display:flex;align-items:center;gap:14px;padding:14px 18px}
+.acc+.acc{border-top:1px solid var(--line)}
+.av{width:48px;height:48px;border-radius:50%;background:var(--soft);color:var(--accent);display:grid;place-items:center;font-weight:700;font-size:1.2rem;flex:none}
+.info{flex:1;min-width:0}
+.name{font-weight:600}
+.user{color:var(--muted);font-size:.9rem;direction:ltr;text-align:right}
+.follow{font:inherit;font-weight:600;cursor:pointer;background:transparent;color:var(--accent);border:1.5px solid var(--accent);border-radius:999px;padding:8px 20px}
+</style>
+</head>
+<body>
+<main>
+  <div class="search">
+    <input type="search" placeholder="ابحث هنا..." aria-label="بحث">
+    <button class="btn" type="button">بحث</button>
+  </div>
+  <section class="list" aria-label="الحسابات">
+    <div class="acc"><div class="av">أ</div><div class="info"><div class="name">أحمد علي</div><div class="user">@ahmed_ali</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">س</div><div class="info"><div class="name">سارة محمود</div><div class="user">@sara_m</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">م</div><div class="info"><div class="name">محمد حسن</div><div class="user">@mohamed_h</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">ن</div><div class="info"><div class="name">نور إبراهيم</div><div class="user">@nour_i</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">ي</div><div class="info"><div class="name">يوسف خالد</div><div class="user">@youssef_k</div></div><button class="follow" type="button">follow</button></div>
+  </section>
+  <section class="list" aria-label="الحسابات">
+    <div class="acc"><div class="av">أ</div><div class="info"><div class="name">أحمد علي</div><div class="user">@ahmed_ali</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">س</div><div class="info"><div class="name">سارة محمود</div><div class="user">@sara_m</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">م</div><div class="info"><div class="name">محمد حسن</div><div class="user">@mohamed_h</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">ن</div><div class="info"><div class="name">نور إبراهيم</div><div class="user">@nour_i</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">ي</div><div class="info"><div class="name">يوسف خالد</div><div class="user">@youssef_k</div></div><button class="follow" type="button">follow</button></div>
+  </section>
+  <section class="list" aria-label="الحسابات">
+    <div class="acc"><div class="av">أ</div><div class="info"><div class="name">أحمد علي</div><div class="user">@ahmed_ali</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">س</div><div class="info"><div class="name">سارة محمود</div><div class="user">@sara_m</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">م</div><div class="info"><div class="name">محمد حسن</div><div class="user">@mohamed_h</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">ن</div><div class="info"><div class="name">نور إبراهيم</div><div class="user">@nour_i</div></div><button class="follow" type="button">follow</button></div>
+    <div class="acc"><div class="av">ي</div><div class="info"><div class="name">يوسف خالد</div><div class="user">@youssef_k</div></div><button class="follow" type="button">follow</button></div>
+  </section>
+</main>
+</body>
+</html>
