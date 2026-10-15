@@ -84,6 +84,12 @@
     p {
         color: gray;
         margin: 0;
+        display: block;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+        direction: rtl;
     }
 }
 
@@ -152,6 +158,10 @@
         border-color: #3b82f6;
         outline: none;
     }
+    input[type="search"]::-webkit-search-cancel-button {
+        cursor: pointer;
+    }
+
     button {
         background-color: rgb(22, 22, 22);
         border-radius: 25%;
@@ -217,6 +227,7 @@
 }
 .namee {
     padding-right: 12px;
+    user-select: none;
     h4 {
         color: gold;
         padding: 0px;
